@@ -13,6 +13,7 @@ const userController = require('./api/common/user/userController');
 const settingsController = require('./api/common/settings/settingsController');
 
 const SeedService = require('./api/seedService');
+
 const seedService = new SeedService();
 
 const app = express();
