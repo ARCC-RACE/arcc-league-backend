@@ -65,8 +65,6 @@ class SeedService {
       const newUser = {
         email: `${firstName}_${lastName}@user.com`,
         fullName: `@User_${firstName}_${lastName}`,
-        firstName,
-        lastName,
         role: 'user',
         salt: hash.salt,
         passwordHash: hash.passwordHash,

@@ -38,12 +38,6 @@ class UserRepository extends BaseRepository {
     filter.query = {};
 
     // names here are not fully consistent with naming convention for compatibility with ng2-smart-table api on UI
-    if (filter.filterByfirstName) {
-      filter.query.firstName = { $regex: filter.filterByfirstName, $options: '-i' };
-    }
-    if (filter.filterBylastName) {
-      filter.query.lastName = { $regex: filter.filterBylastName, $options: '-i' };
-    }
     if (filter.filterByuserName) {
       filter.query.fullName = { $regex: filter.filterByuserName, $options: '-i' };
     }

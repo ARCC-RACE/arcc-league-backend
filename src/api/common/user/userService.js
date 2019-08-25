@@ -67,8 +67,6 @@ class UserService {
       role: user.role,
       age: user.age,
       login: user.fullName,
-      firstName: user.firstName,
-      lastName: user.lastName,
       address: user.address || {},
       settings: settingService.mapSettingsToDto(user.settings),
     } : {};
@@ -80,8 +78,7 @@ class UserService {
       age: dto.age,
       role: dto.role,
       login: dto.fullName,
-      firstName: dto.firstName,
-      lastName: dto.lastName,
+
       address: dto.address,
     } : {};
   }
