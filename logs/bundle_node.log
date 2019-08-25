@@ -8,3 +8,69 @@
 {"message":"Seed Data","level":"info"}
 {"message":"Server start listening port: 3001","level":"info"}
 {"message":"MongoDB client has been successfully created","level":"info"}
+{"message":"Connecting to MongoDB client...","level":"info"}
+{"message":"Seed Data","level":"info"}
+{"message":"Server start listening port: 3001","level":"info"}
+{"error":{"code":"EADDRINUSE","errno":"EADDRINUSE","syscall":"listen","address":"::","port":3001},"level":"error","message":"uncaughtException: listen EADDRINUSE: address already in use :::3001\nError: listen EADDRINUSE: address already in use :::3001\n    at Server.setupListenHandle [as _listen2] (net.js:1228:14)\n    at listenInCluster (net.js:1276:12)\n    at Server.listen (net.js:1364:7)\n    at Function.listen (/Users/caelinsutch/Github/ARCC-League/backend/node_modules/express/lib/application.js:618:24)\n    at Object.<anonymous> (/Users/caelinsutch/Github/ARCC-League/backend/src/app.js:56:5)\n    at Module._compile (internal/modules/cjs/loader.js:868:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:879:10)\n    at Module.load (internal/modules/cjs/loader.js:731:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:644:12)\n    at Function.Module.runMain (internal/modules/cjs/loader.js:931:10)","stack":"Error: listen EADDRINUSE: address already in use :::3001\n    at Server.setupListenHandle [as _listen2] (net.js:1228:14)\n    at listenInCluster (net.js:1276:12)\n    at Server.listen (net.js:1364:7)\n    at Function.listen (/Users/caelinsutch/Github/ARCC-League/backend/node_modules/express/lib/application.js:618:24)\n    at Object.<anonymous> (/Users/caelinsutch/Github/ARCC-League/backend/src/app.js:56:5)\n    at Module._compile (internal/modules/cjs/loader.js:868:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:879:10)\n    at Module.load (internal/modules/cjs/loader.js:731:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:644:12)\n    at Function.Module.runMain (internal/modules/cjs/loader.js:931:10)","exception":true,"date":"Sat Aug 24 2019 21:28:24 GMT-0700 (Pacific Daylight Time)","process":{"pid":94440,"uid":501,"gid":20,"cwd":"/Users/caelinsutch/Github/ARCC-League/backend","execPath":"/Users/caelinsutch/.nvm/versions/node/v12.8.0/bin/node","version":"v12.8.0","argv":["/Users/caelinsutch/.nvm/versions/node/v12.8.0/bin/node","/Users/caelinsutch/Github/ARCC-League/backend/src/app"],"memoryUsage":{"rss":44916736,"heapTotal":20508672,"heapUsed":12810560,"external":20101144}},"os":{"loadavg":[18.16455078125,8.38232421875,4.7451171875],"uptime":546371},"trace":[{"column":14,"file":"net.js","function":"Server.setupListenHandle [as _listen2]","line":1228,"method":"setupListenHandle [as _listen2]","native":false},{"column":12,"file":"net.js","function":"listenInCluster","line":1276,"method":null,"native":false},{"column":7,"file":"net.js","function":"Server.listen","line":1364,"method":"listen","native":false},{"column":24,"file":"/Users/caelinsutch/Github/ARCC-League/backend/node_modules/express/lib/application.js","function":"Function.listen","line":618,"method":"listen","native":false},{"column":5,"file":"/Users/caelinsutch/Github/ARCC-League/backend/src/app.js","function":null,"line":56,"method":null,"native":false},{"column":30,"file":"internal/modules/cjs/loader.js","function":"Module._compile","line":868,"method":"_compile","native":false},{"column":10,"file":"internal/modules/cjs/loader.js","function":"Module._extensions..js","line":879,"method":".js","native":false},{"column":32,"file":"internal/modules/cjs/loader.js","function":"Module.load","line":731,"method":"load","native":false},{"column":12,"file":"internal/modules/cjs/loader.js","function":"Module._load","line":644,"method":"_load","native":false},{"column":10,"file":"internal/modules/cjs/loader.js","function":"Module.runMain","line":931,"method":"runMain","native":false}]}
+{"message":"Hello Caelin Sutch,\nWe have received password reset request. To do this, please proceed at http://localhost:4200/#/auth/reset-password?reset_password_token=297f74eab3038d5fd43efc7542073505722782d8ac9b5c968c81dbbf6c16638eb0414292627611ca92b319634031589226123f0db67f24da4443087038c200c5\nIf it wasn't you, take no action or contact support.\n\nThank you,\nSupport team.","level":"info"}
+{"level":"error"}
+{"message":"Connecting to MongoDB client...","level":"info"}
+{"message":"Seed Data","level":"info"}
+{"message":"Server start listening port: 3001","level":"info"}
+{"message":"MongoDB client has been successfully created","level":"info"}
+{"message":"Connecting to MongoDB client...","level":"info"}
+{"message":"Seed Data","level":"info"}
+{"message":"Server start listening port: 3001","level":"info"}
+{"message":"MongoDB client has been successfully created","level":"info"}
+{"message":"Connecting to MongoDB client...","level":"info"}
+{"message":"Seed Data","level":"info"}
+{"message":"Server start listening port: 3001","level":"info"}
+{"message":"MongoDB client has been successfully created","level":"info"}
+{"message":"Connecting to MongoDB client...","level":"info"}
+{"message":"Seed Data","level":"info"}
+{"message":"Server start listening port: 3001","level":"info"}
+{"message":"MongoDB client has been successfully created","level":"info"}
+{"message":"Connecting to MongoDB client...","level":"info"}
+{"message":"Seed Data","level":"info"}
+{"message":"Server start listening port: 3001","level":"info"}
+{"message":"MongoDB client has been successfully created","level":"info"}
+{"message":"Connecting to MongoDB client...","level":"info"}
+{"message":"Seed Data","level":"info"}
+{"message":"Server start listening port: 3001","level":"info"}
+{"message":"MongoDB client has been successfully created","level":"info"}
+{"message":"Connecting to MongoDB client...","level":"info"}
+{"message":"Seed Data","level":"info"}
+{"message":"Server start listening port: 3001","level":"info"}
+{"message":"MongoDB client has been successfully created","level":"info"}
+{"message":"Connecting to MongoDB client...","level":"info"}
+{"message":"Seed Data","level":"info"}
+{"message":"Server start listening port: 3001","level":"info"}
+{"message":"MongoDB client has been successfully created","level":"info"}
+{"message":"Connecting to MongoDB client...","level":"info"}
+{"message":"Seed Data","level":"info"}
+{"message":"Server start listening port: 3001","level":"info"}
+{"message":"MongoDB client has been successfully created","level":"info"}
+{"message":"Connecting to MongoDB client...","level":"info"}
+{"message":"Seed Data","level":"info"}
+{"message":"Server start listening port: 3001","level":"info"}
+{"message":"MongoDB client has been successfully created","level":"info"}
+{"message":"Connecting to MongoDB client...","level":"info"}
+{"message":"Seed Data","level":"info"}
+{"message":"Server start listening port: 3001","level":"info"}
+{"message":"MongoDB client has been successfully created","level":"info"}
+{"message":"Connecting to MongoDB client...","level":"info"}
+{"message":"Seed Data","level":"info"}
+{"message":"Server start listening port: 3001","level":"info"}
+{"message":"MongoDB client has been successfully created","level":"info"}
+{"message":"Connecting to MongoDB client...","level":"info"}
+{"message":"Seed Data","level":"info"}
+{"message":"Server start listening port: 3001","level":"info"}
+{"message":"MongoDB client has been successfully created","level":"info"}
+{"message":"Connecting to MongoDB client...","level":"info"}
+{"message":"Seed Data","level":"info"}
+{"message":"Server start listening port: 3001","level":"info"}
+{"message":"MongoDB client has been successfully created","level":"info"}
+{"message":"Connecting to MongoDB client...","level":"info"}
+{"message":"Seed Data","level":"info"}
+{"message":"Server start listening port: 3001","level":"info"}
+{"message":"MongoDB client has been successfully created","level":"info"}
