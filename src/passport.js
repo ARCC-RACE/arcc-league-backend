@@ -27,7 +27,6 @@ passport.use(new LocalStrategy({
       if (!user || user.passwordHash !== passwordHash) {
         return cb(null, false, { message: 'Incorrect utils or password.' });
       }
-      console.log(user.role)
       return cb(null, { id: user._id, role: user.role }, { message: 'Logged In Successfully' });
     })
     .catch(() => cb(null, false, { message: 'Incorrect utils or password.' }));
