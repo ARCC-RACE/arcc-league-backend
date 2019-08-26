@@ -46,19 +46,13 @@ class BaseRepository {
   edit(id, item) {
     return this.dbClient
       .then(db => {
-          db.collection(this.collection).updateOne(
-            { _id: ObjectID(id) },
-            { $set: item },
-            { upsert: true },
-          ),
-        );
         db
           .collection(this.collection)
           .updateOne(
             { _id: ObjectID(id) },
             { $set: item },
             { upsert: true },
-          )
+          );
       });
   }
 
@@ -94,7 +88,7 @@ class BaseRepository {
         }
 
         return data.toArray();
-    });
+      });
   }
 }
 
