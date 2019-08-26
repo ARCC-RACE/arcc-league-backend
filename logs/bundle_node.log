@@ -82,3 +82,15 @@
 {"message":"Seed Data","level":"info"}
 {"message":"Server start listening port: 3001","level":"info"}
 {"message":"MongoDB client has been successfully created","level":"info"}
+{"message":"Connecting to MongoDB client...","level":"info"}
+{"message":"Seed Data","level":"info"}
+{"message":"Server start listening port: 3001","level":"info"}
+{"message":"Error occurred while connecting to mongodb: Error: connect ECONNREFUSED 127.0.0.1:27017","level":"error"}
+{"message":"Connecting to MongoDB client...","level":"info"}
+{"message":"Seed Data","level":"info"}
+{"message":"Server start listening port: 3001","level":"info"}
+{"message":"MongoDB client has been successfully created","level":"info"}
+{"message":"Connecting to MongoDB client...","level":"info"}
+{"message":"Seed Data","level":"info"}
+{"message":"Server start listening port: 3001","level":"info"}
+{"message":"MongoDB client has been successfully created","level":"info"}
