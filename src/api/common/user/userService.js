@@ -1,9 +1,5 @@
 const UserRepository = require('./userRepository');
 
-const SettingService = require('../settings/settingsService');
-
-const settingService = new SettingService();
-
 class UserService {
   constructor() {
     this.repository = new UserRepository();
@@ -60,6 +56,11 @@ class UserService {
       });
   }
 
+  /**
+   * Maps user object ot something that's safe to return
+   * @param user
+   * @returns {*}
+   */
   mapUserToDto(user) {
     return user ? {
       id: user._id,
@@ -68,7 +69,8 @@ class UserService {
       age: user.age,
       login: user.fullName,
       address: user.address || {},
-      settings: settingService.mapSettingsToDto(user.settings),
+      themeName: user.themeName,
+      picture: user.picture,
     } : {};
   }
 
@@ -78,8 +80,9 @@ class UserService {
       age: dto.age,
       role: dto.role,
       login: dto.fullName,
-
       address: dto.address,
+      themeName: dto.themeName,
+      picture: dto.picture,
     } : {};
   }
 }

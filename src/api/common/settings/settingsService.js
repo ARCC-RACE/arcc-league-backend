@@ -1,5 +1,3 @@
-
-
 const SettingsRepository = require('./settingsRepository');
 
 class SettingsService {
