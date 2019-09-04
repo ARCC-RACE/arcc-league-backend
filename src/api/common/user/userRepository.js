@@ -58,15 +58,6 @@ class UserRepository extends BaseRepository {
     }
     return super.listFiltered(filter);
   }
-
-  // TODO: implement photo return
-  getPhoto(userId) {
-    return 'https://www.google.com/search?q=user+profile+picture&tbm=isch&source=iu&ictx=1&fir=DFY_9QvDjOS1hM%253A%252Crz7UtP8r5CNhgM%252C_&vet=1&usg=AI4_-kR1EO-hNSjoWI8Z_2UJGaqZlnURZg&sa=X&ved=2ahUKEwizgov6-aXkAhVXnp4KHaiaCRAQ9QEwAnoECAcQCA#imgrc=DFY_9QvDjOS1hM:';
-    // return this.dbClient
-    //   .then(db => db
-    //     .collection(this.collection)
-    //   )
-  }
 }
 
 module.exports = UserRepository;

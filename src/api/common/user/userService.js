@@ -71,6 +71,7 @@ class UserService {
       address: user.address || {},
       themeName: user.themeName,
       picture: user.picture,
+      updates: user.updates,
     } : {};
   }
 
@@ -83,6 +84,7 @@ class UserService {
       address: dto.address,
       themeName: dto.themeName,
       picture: dto.picture,
+      updates: dto.updates,
     } : {};
   }
 }
