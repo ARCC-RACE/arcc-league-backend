@@ -71,17 +71,25 @@ class ModelService {
 
   /**
    * Maps model to an object
-   * @param user
+   * @param model
    * @returns {*}
    */
-  mapModelToDto(user) {
-    return user ? {
-      id: user._id,
-      email: user.email,
-      role: user.role,
-      age: user.age,
-      login: user.fullName,
-      address: user.address || {},
+  // eslint-disable-next-line class-methods-use-this
+  mapModelToDto(model) {
+    return model ? {
+      id: model._id,
+      ownerId: model.ownerId,
+      trackName: model.trackName, // Track model was tested on)
+      modelName: model.name, // (Name of the model) Can be changed by User
+      modelDescription: model.description, // (User description) Can be changed by User
+      dateUploaded: model.dateUploaded, // (Date the model was uploaded)
+      isEvaluated: model.isEvaluated,
+      time:model.time, // (Encoded Time it completed track)
+      speedTested: model.speedTested, // (Speed the model was tested at (percentage))
+      videoLink: model.videoLink, // (Link to video upload)
+      modelLink: model.videoLink, // (Link to the file)
+      invoiceNumber: model.invoiceNumber, // (Paypal Order ID)
+      isPaid: model.isPaid, // (If users payed for it yet)
     } : {};
   }
 
@@ -90,14 +98,22 @@ class ModelService {
    * @param dto
    * @returns {*}
    */
+  // eslint-disable-next-line class-methods-use-this
   mapDtoToModel(dto) {
     return dto ? {
-      email: dto.email,
-      age: dto.age,
-      role: dto.role,
-      login: dto.fullName,
-
-      address: dto.address,
+      id: dto._id,
+      ownerId: dto.ownerId,
+      trackName: dto.trackName, // Track model was tested on)
+      modelName: dto.name, // (Name of the model) Can be changed by User
+      modelDescription: dto.description, // (User description) Can be changed by User
+      dateUploaded: dto.dateUploaded, // (Date the model was uploaded)
+      isEvaluated: dto.isEvaluated,
+      time:dto.time, // (Encoded Time it completed track)
+      speedTested: dto.speedTested, // (Speed the model was tested at (percentage))
+      videoLink: dto.videoLink, // (Link to video upload)
+      modelLink: dto.videoLink, // (Link to the file)
+      invoiceNumber: dto.invoiceNumber, // (Paypal Order ID)
+      isPaid: dto.isPaid, // (If users payed for it yet)
     } : {};
   }
 }

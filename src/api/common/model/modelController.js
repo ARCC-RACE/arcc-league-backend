@@ -21,7 +21,7 @@ router.get('/', (req, res) => {
 router.get('/current', (req, res) => {
   modelService
     .findById(req.user.id)
-    .then(models => res.send(models))
+    .then(models => res.send(models));
 })
 
 /**
