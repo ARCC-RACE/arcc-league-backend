@@ -13,6 +13,7 @@
     "max-len": ["error", { "code": 120 }],
     "arrow-body-style": 0,
     "arrow-parens": 0,
-    "no-underscore-dangle": 0
+    "no-underscore-dangle": 0,
+    "no-param-reassign": 0
   }
 }

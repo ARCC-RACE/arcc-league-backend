@@ -71,7 +71,7 @@ class ModelService {
 
   findByUserId(userId) {
     return this.repository.findByUserId(userId)
-      .then(model => this.mapModelToDto(model))
+      .then(model => this.mapModelToDto(model));
   }
 
   /**
@@ -89,7 +89,7 @@ class ModelService {
       modelDescription: model.description, // (User description) Can be changed by User
       dateUploaded: model.dateUploaded, // (Date the model was uploaded)
       isEvaluated: model.isEvaluated,
-      time:model.time, // (Encoded Time it completed track)
+      time: model.time, // (Encoded Time it completed track)
       speedTested: model.speedTested, // (Speed the model was tested at (percentage))
       videoLink: model.videoLink, // (Link to video upload)
       modelLink: model.videoLink, // (Link to the file)
@@ -113,7 +113,7 @@ class ModelService {
       modelDescription: dto.description, // (User description) Can be changed by User
       dateUploaded: dto.dateUploaded, // (Date the model was uploaded)
       isEvaluated: dto.isEvaluated,
-      time:dto.time, // (Encoded Time it completed track)
+      time: dto.time, // (Encoded Time it completed track)
       speedTested: dto.speedTested, // (Speed the model was tested at (percentage))
       videoLink: dto.videoLink, // (Link to video upload)
       modelLink: dto.videoLink, // (Link to the file)

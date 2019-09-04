@@ -15,8 +15,7 @@ class UserRepository extends BaseRepository {
           { $lookup: { from: 'settings', localField: '_id', foreignField: '_id', as: 'settings' } },
           { $limit: 1 },
         ])
-        .toArray()
-      )
+        .toArray())
       .then(data => (data && data.length ? data[0] : data));
   }
 
@@ -35,6 +34,7 @@ class UserRepository extends BaseRepository {
   }
 
   listFiltered(filter) {
+    // eslint-disable-next-line no-param-reassign
     filter.query = {};
 
     // names here are not fully consistent with naming convention for compatibility with ng2-smart-table api on UI

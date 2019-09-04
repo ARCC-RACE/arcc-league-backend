@@ -54,4 +54,13 @@ router.put('/:id', (req, res) => {
     .then(model => res.send(model));
 });
 
+/**
+ * Deletes Model
+ */
+router.delete('/:id', (req, res) => {
+  modelService
+    .deleteModel(req.params.id)
+    .then(() => res.send({ id: req.params.id }));
+});
+
 module.exports = router;

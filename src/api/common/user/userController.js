@@ -48,13 +48,4 @@ router.put('/:id', (req, res) => {
     .then(user => res.send(user));
 });
 
-router.get('/:userId/photo', (req, res) => {
-  userService
-    .getPhoto(req.params.userId)
-    .then(photo => {
-      res.set('Content-Type', 'image/png');
-      res.send(photo);
-    });
-});
-
 module.exports = router;
