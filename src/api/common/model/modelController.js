@@ -16,20 +16,14 @@ router.get('/', (req, res) => {
 });
 
 /**
- * Get current users models
+ * Gets users models based off of their ID
+ * Request must have "userId" in body
  */
-router.get('/current', (req, res) => {
+router.get('/usersmodels', (req, res) => {
   modelService
-    .findById(req.user.id)
+    .findByUserId(req.body.userId)
     .then(models => res.send(models));
-})
-
-/**
- * Gets models by ID
- */
-router.get('/:id', (req, res) => {
-
-})
+});
 
 /**
  * Creates a new model
@@ -41,10 +35,23 @@ router.post('/', (req, res) => {
 });
 
 /**
+ * Gets models by ID
+ * Example: get to http://localhost:3001/api/models/5d6f07da58193c502aed7c0d
+ * Returns model
+ */
+router.get('/:id', (req, res) => {
+  modelService
+    .findById(req.params.id)
+    .then(model => res.send(model));
+});
+
+/**
  * Edits a model by ID
  */
 router.put('/:id', (req, res) => {
-
-})
+  modelService
+    .editModel(req.body, req.params.id)
+    .then(model => res.send(model));
+});
 
 module.exports = router;

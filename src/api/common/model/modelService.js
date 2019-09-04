@@ -25,7 +25,7 @@ class ModelService {
    */
   findById(id) {
     return this.repository.findById(id)
-      .then(user => this.mapModelToDto(user));
+      .then(model => this.mapModelToDto(model));
   }
 
   /**
@@ -42,9 +42,9 @@ class ModelService {
    * @param dto Object with model paramters
    * @returns {*}
    */
-  editModel(dto) {
+  editModel(dto, modelId) {
     const model = this.mapDtoToModel(dto);
-    return this.repository.edit(dto.id, model);
+    return this.repository.edit(modelId, model);
   }
 
   deleteModel(id) {
@@ -67,6 +67,11 @@ class ModelService {
           totalCount: count,
         };
       });
+  }
+
+  findByUserId(userId) {
+    return this.repository.findByUserId(userId)
+      .then(model => this.mapModelToDto(model))
   }
 
   /**
