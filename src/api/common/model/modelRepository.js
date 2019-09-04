@@ -45,11 +45,9 @@ class ModelRepository extends BaseRepository {
       .then(db => db
         .collection(this.collection)
         .aggregate([
-          { $match: { ownerId: userId} },
-          { $limit: 1 },
+          { $match: { ownerId: userId } },
         ])
-        .toArray())
-      .then(data => (data && data.length ? data[0] : data));
+        .toArray());
   }
 }
 

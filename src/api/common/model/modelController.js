@@ -19,11 +19,17 @@ router.get('/', (req, res) => {
  * Gets users models based off of their ID
  * Request must have "userId" in body
  */
-router.get('/usersmodels', (req, res) => {
+router.get('/usersmodels/:id', (req, res) => {
   modelService
-    .findByUserId(req.body.userId)
+    .findByUserId(req.params.id)
     .then(models => res.send(models));
 });
+
+router.get('/usersmodels', (req, res) => {
+  modelService
+    .list(req.query)
+    .then(models => res.send(models));
+})
 
 /**
  * Creates a new model

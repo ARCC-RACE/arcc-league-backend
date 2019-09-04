@@ -70,8 +70,8 @@ class ModelService {
   }
 
   findByUserId(userId) {
-    return this.repository.findByUserId(userId)
-      .then(model => this.mapModelToDto(model));
+    console.log(this.repository.findByUserId(userId));
+    return this.repository.findByUserId(userId);
   }
 
   /**
