@@ -60,7 +60,7 @@ class BaseRepository {
     return this.dbClient
       .then(db => db
         .collection(this.collection)
-        .remove({ _id: ObjectID(id) }));
+        .deleteOne({ _id: ObjectID(id) }));
   }
 
   list() {
