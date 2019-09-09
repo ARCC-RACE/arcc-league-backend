@@ -61,11 +61,8 @@ class ModelService {
       this.repository.listFiltered(filter),
       this.repository.getCountFiltered(filter),
     ])
-      .then(([data, count]) => {
-        return {
-          items: data.map(item => this.mapModelToDto(item)),
-          totalCount: count,
-        };
+      .then(([data]) => {
+        return data.map(item => this.mapModelToDto(item));
       });
   }
 
