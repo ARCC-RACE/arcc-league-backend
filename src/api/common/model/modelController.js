@@ -3,6 +3,9 @@ const express = require('express');
 const router = express.Router();
 
 const ModelService = require('./modelService');
+const awsHelper = require('../../../utils/aws');
+
+const singleUpload = awsHelper.single('image');
 
 const modelService = new ModelService();
 
@@ -35,12 +38,26 @@ router.get('/usersmodels', (req, res) => {
  * Creates a new model
  */
 router.post('/', (req, res) => {
+
   modelService
     .addModel(req.body)
     .then(model => res.send(model));
 });
 
 /**
+ * Upload Model file through AWS
+ */
+router.post('/upload', (req, res) => {
+  singleUpload(req, res, (err) => {
+    if (err) {
+      return res.status(422).send({ errors: [{ detail: err }] });
+    }
+
+    return res.json({ modelUrl: req.file.location });
+  });
+})
+
+/**w
  * Gets models by ID
  * Example: get to http://localhost:3001/api/models/5d6f07da58193c502aed7c0d
  * Returns model

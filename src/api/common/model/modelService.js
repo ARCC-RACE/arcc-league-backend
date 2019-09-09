@@ -1,5 +1,6 @@
 const ModelRepository = require('./modelRepository');
 
+
 class ModelService {
   constructor() {
     this.repository = new ModelRepository();
@@ -67,7 +68,6 @@ class ModelService {
   }
 
   findByUserId(userId) {
-    console.log(this.repository.findByUserId(userId));
     return this.repository.findByUserId(userId);
   }
 
