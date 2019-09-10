@@ -1,6 +1,5 @@
 const ModelRepository = require('./modelRepository');
 
-
 class ModelService {
   constructor() {
     this.repository = new ModelRepository();
@@ -35,7 +34,7 @@ class ModelService {
    * @returns {*}
    */
   addModel(model) {
-    return this.repository.add(model);
+    return this.repository.add(this.mapDtoToModel(model));
   }
 
   /**

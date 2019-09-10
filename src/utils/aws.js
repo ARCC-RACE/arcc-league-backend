@@ -14,10 +14,10 @@ const s3 = new aws.S3();
 
 // What file types to filter
 const fileFilter = (req, file, cb) => {
-  if (file.mimetype === 'image/jpeg' || file.mimetype === 'image/png') {
+  if (file.mimetype === 'application/gzip') {
     cb(null, true);
   } else {
-    cb(new Error('Invalid file type, only JPEG and PNG is allowed!'), false);
+    cb(new Error('Invalid file type, only .tar.gz is allowed!'), false);
   }
 };
 

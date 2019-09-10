@@ -52,7 +52,6 @@ router.post('/upload', (req, res) => {
     if (err) {
       return res.status(422).send({ errors: [{ detail: err }] });
     }
-
     return res.json({ modelUrl: req.file.location });
   });
 });
