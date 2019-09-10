@@ -21,6 +21,14 @@ const fileFilter = (req, file, cb) => {
   }
 };
 
+const imageFilter = (req, file, cb) => {
+  if (file.mimetype === 'image/jpeg' || file.mimetype === 'image/png') {
+    cb(null, true)
+  } else {
+    cb(new Error('Invalid file type, only .png or .jpg is allowed!'), false);
+  }
+};
+
 // Upload
 const upload = multer({
   fileFilter,
@@ -29,7 +37,22 @@ const upload = multer({
     s3,
     bucket: 'arcc-league',
     metadata(req, file, cb) {
-      cb(null, { fieldName: 'TESTING_METADATA' });
+      cb(null, { fieldName: '' });
+    },
+    key(req, file, cb) {
+      cb(null, `${Date.now().toString()}${file.originalname}`);
+    },
+  }),
+});
+
+const profileUpload = multer({
+  imageFilter,
+  storage: multerS3({
+    acl: 'public-read',
+    s3,
+    bucket: 'arcc-profile-pictures',
+    metadata(req, file, cb) {
+      cb(null, { fieldName: 'profile' });
     },
     key(req, file, cb) {
       cb(null, Date.now().toString());
@@ -37,4 +60,4 @@ const upload = multer({
   }),
 });
 
-module.exports = upload;
+module.exports = { upload, profileUpload };

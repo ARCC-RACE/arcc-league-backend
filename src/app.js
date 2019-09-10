@@ -43,7 +43,7 @@ seedService.checkAndSeed();
 
 // routes for common controllers
 app.use(`${root}/auth`, authController);
-app.use(`${root}/users`, auth, userController);
+app.use(`${root}/users`, userController);
 app.use(`${root}/settings`, auth, settingsController);
 app.use(`${root}/models`, modelController);
 

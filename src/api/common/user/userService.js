@@ -61,6 +61,7 @@ class UserService {
    * @param user
    * @returns {*}
    */
+  // eslint-disable-next-line class-methods-use-this
   mapUserToDto(user) {
     return user ? {
       id: user._id,
@@ -75,6 +76,7 @@ class UserService {
     } : {};
   }
 
+  // eslint-disable-next-line class-methods-use-this
   mapDtoToUser(dto) {
     return dto ? {
       email: dto.email,

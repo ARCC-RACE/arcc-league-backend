@@ -5,7 +5,7 @@ const router = express.Router();
 const ModelService = require('./modelService');
 const awsHelper = require('../../../utils/aws');
 
-const singleUpload = awsHelper.single('image');
+const singleUpload = awsHelper.upload.single('image');
 
 const modelService = new ModelService();
 
