@@ -28,12 +28,6 @@ router.get('/usersmodels/:id', (req, res) => {
     .then(models => res.send(models));
 });
 
-router.get('/usersmodels', (req, res) => {
-  modelService
-    .list(req.query)
-    .then(models => res.send(models));
-})
-
 /**
  * Creates a new model
  */
