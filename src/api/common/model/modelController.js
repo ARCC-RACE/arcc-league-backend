@@ -55,9 +55,9 @@ router.post('/upload', (req, res) => {
 
     return res.json({ modelUrl: req.file.location });
   });
-})
+});
 
-/**w
+/**
  * Gets models by ID
  * Example: get to http://localhost:3001/api/models/5d6f07da58193c502aed7c0d
  * Returns model
