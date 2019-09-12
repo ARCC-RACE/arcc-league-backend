@@ -3,22 +3,24 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node ./src/app",
-    "dev": "./node_modules/nodemon/bin/nodemon.js ./src/app",
-    "start:prod": "export NODE_ENV=production&&node ./src/app",
+    "dev": "firebase emulators:start",
+    "deploy": "firebase deploy",
     "lint": "eslint --report-unused-disable-directives .",
     "lint:fix": "eslint --fix ."
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/akveo-private/bundle-node.git"
+    "url": "git+https://github.com/ARCC-RACE/ARCC-League"
   },
-  "author": "Akveo",
+  "engines": {
+    "node": "8"
+  },
+  "author": "Caelin Sutch",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/akveo-private/bundle-node/issues"
+    "url": "https://github.com/ARCC-RACE/ARCC-League/issues"
   },
-  "homepage": "https://github.com/akveo-private/bundle-node#readme",
+  "homepage": "league.arcc.ai",
   "dependencies": {
     "app-root-path": "^2.2.1",
     "aws-sdk": "^2.525.0",
@@ -27,6 +29,8 @@
     "cors": "^2.8.5",
     "crypto": "^1.0.1",
     "express": "^4.16.4",
+    "firebase-admin": "^8.5.0",
+    "firebase-functions": "^3.2.0",
     "fs": "0.0.1-security",
     "jsonwebtoken": "^8.5.0",
     "mongodb": "^3.2.2",

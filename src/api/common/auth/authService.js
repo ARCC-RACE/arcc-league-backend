@@ -18,6 +18,8 @@ class AuthService {
         const newUser = {
           email: user.email,
           fullName: user.fullName,
+          picture: user.picture,
+          themeName: user.themeName,
           role: 'user',
           salt,
           passwordHash,

@@ -30,7 +30,7 @@ router.post('/sign-up', (req, res) => {
   authService
     .register(req.body)
     .then(() => res.send({ message: 'ok' }))
-    .catch(err => res.status(400).send({ error: err.message }));
+    .catch(err => res.status(406).send({ data: { errors: err.message } }));
 });
 
 router.post('/reset-pass', (req, res) => {

@@ -1,10 +1,10 @@
 
-
+// TODO implement env variables in firebae to allow default and production to work
 module.exports = {
 
   api: {
     port: 3001,
-    root: '/api',
+    root: '/',
   },
 
   frontEnd: {
@@ -25,7 +25,8 @@ module.exports = {
   },
 
   db: {
-    url: 'mongodb://localhost:27017/bundle-node',
+    // eslint-disable-next-line max-len
+    url: 'mongodb://arcc-league:FymHoW7Mv0wyNYHKpsYFy3NaSIfJc7ZbXLMUzfuXCO0NUpONHUelxAtFjgKdyt5vsvTsJFP7G2TIKKt1l9Z8iw==@arcc-league.documents.azure.com:10255/?ssl=true',
     name: 'bundle-node',
   },
 

@@ -1,23 +1,29 @@
 const express = require('express');
 const cors = require('cors');
-const passport = require('passport');
 const bodyParser = require('body-parser');
 const config = require('config');
-const logger = require('./utils/logger');
 
-require('./passport');
+const admin = require('firebase-admin');
+const functions = require('firebase-functions');
+const passport = require('passport');
+const logger = require('./src/utils/logger');
+
+require('./src/passport');
 
 // common controllers
-const authController = require('./api/common/auth/authController');
-const userController = require('./api/common/user/userController');
-const settingsController = require('./api/common/settings/settingsController');
-const modelController = require('./api/common/model/modelController');
+const authController = require('./src/api/common/auth/authController');
+const userController = require('./src/api/common/user/userController');
+const settingsController = require('./src/api/common/settings/settingsController');
+const modelController = require('./src/api/common/model/modelController');
 
-const SeedService = require('./api/seedService');
+const SeedService = require('./src/api/seedService');
 
 const seedService = new SeedService();
 
+
 const app = express();
+admin.initializeApp();
+
 const { port, root } = config.get('api');
 
 function logErrors(err, req, res, next) {
@@ -58,3 +64,16 @@ app.get('/', (req, res) => {
 app.listen(port);
 
 logger.info(`Server start listening port: ${port}`);
+
+const api = functions.https.onRequest((request, response) => {
+  if (!request.path) {
+    request.url = `/${request.url}`; // Prepend '/' to keep query params if any
+  }
+
+  return app(request, response);
+});
+
+// Configure Firebase Server
+module.exports = {
+  api,
+};
