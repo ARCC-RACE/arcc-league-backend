@@ -4,7 +4,7 @@ module.exports = {
 
   api: {
     port: 3001,
-    root: '/',
+    root: '',
   },
 
   frontEnd: {

@@ -48,10 +48,10 @@ const auth = passport.authenticate('jwt', { session: false });
 seedService.checkAndSeed();
 
 // routes for common controllers
-app.use(`${root}/auth`, authController);
-app.use(`${root}/users`, userController);
-app.use(`${root}/settings`, auth, settingsController);
-app.use(`${root}/models`, modelController);
+app.use(`/auth`, authController);
+app.use(`/users`, userController);
+app.use(`/settings`, auth, settingsController);
+app.use(`/models`, modelController);
 
 
 app.use(logErrors);
