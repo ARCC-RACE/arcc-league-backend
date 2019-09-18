@@ -24,7 +24,7 @@ const seedService = new SeedService();
 const app = express();
 admin.initializeApp();
 
-const { port, root } = config.get('api');
+const { port } = config.get('api');
 
 function logErrors(err, req, res, next) {
   logger.error(err);
@@ -39,6 +39,14 @@ function clientErrorHandler(err, req, res, next) {
   }
 }
 
+// CORS
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', 'https://league.arcc.ai');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  next();
+});
+
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 app.use(bodyParser.json());
 
@@ -48,10 +56,10 @@ const auth = passport.authenticate('jwt', { session: false });
 seedService.checkAndSeed();
 
 // routes for common controllers
-app.use(`/auth`, authController);
-app.use(`/users`, userController);
-app.use(`/settings`, auth, settingsController);
-app.use(`/models`, modelController);
+app.use('/auth', authController);
+app.use('/users', userController);
+app.use('/settings', auth, settingsController);
+app.use('/models', modelController);
 
 
 app.use(logErrors);
