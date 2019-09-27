@@ -4,7 +4,7 @@ module.exports = {
 
   api: {
     port: process.env.PORT,
-    root: '/',
+    root: '',
   },
 
   auth: {

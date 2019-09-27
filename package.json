@@ -8,7 +8,8 @@
     "start:prod": "export NODE_ENV=production&&node app.js",
     "lint": "eslint --report-unused-disable-directives .",
     "lint:fix": "eslint --fix .",
-    "deploy": "git add . && git commit -am 'Deploy' && eb deploy"
+    "deploy": "eb deploy",
+    "deploy-full": "git add . && git commit -am 'Deploy' && eb deploy"
   },
   "repository": {
     "type": "git",
@@ -31,8 +32,6 @@
     "cors": "^2.8.5",
     "crypto": "^1.0.1",
     "express": "^4.16.4",
-    "firebase-admin": "^8.5.0",
-    "firebase-functions": "^3.2.0",
     "fs": "0.0.1-security",
     "jsonwebtoken": "^8.5.0",
     "mongodb": "^3.2.2",
