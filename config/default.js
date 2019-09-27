@@ -1,19 +1,9 @@
-const functions = require('firebase-functions');
-// Porting envs from firebase config
-const config = functions.config();
-// eslint-disable-next-line guard-for-in,no-restricted-syntax
-for (const key in config.envs) {
-  process.env[key.toUpperCase()] = config.envs[key];
-}
-// Run this to setup env variables
-// `firebase functions:config:set env.access_key_id=$ACCESS_KEY_ID env.access_key_secret=$ACCESS_KEY_SECRET`
 
-// TODO implement env variables in firebae to allow default and production to work
 module.exports = {
 
   api: {
     port: 3001,
-    root: '',
+    root: '/api',
   },
 
   frontEnd: {
@@ -34,8 +24,7 @@ module.exports = {
   },
 
   db: {
-    // eslint-disable-next-line max-len
-    url: 'mongodb://127.0.0.1:27017',
+    url: 'mongodb://localhost:27017/bundle-node',
     name: 'bundle-node',
   },
 

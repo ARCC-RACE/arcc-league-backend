@@ -1,11 +1,8 @@
 const express = require('express');
 const cors = require('cors');
+const passport = require('passport');
 const bodyParser = require('body-parser');
 const config = require('config');
-
-const admin = require('firebase-admin');
-const functions = require('firebase-functions');
-const passport = require('passport');
 const logger = require('./src/utils/logger');
 
 require('./src/passport');
@@ -20,11 +17,8 @@ const SeedService = require('./src/api/seedService');
 
 const seedService = new SeedService();
 
-
 const app = express();
-admin.initializeApp();
-
-const { port } = config.get('api');
+const { port, root } = config.get('api');
 
 function logErrors(err, req, res, next) {
   logger.error(err);
@@ -55,11 +49,12 @@ const auth = passport.authenticate('jwt', { session: false });
 // seed data in case of empty data base
 seedService.checkAndSeed();
 
+
 // routes for common controllers
-app.use('/auth', authController);
-app.use('/users', userController);
-app.use('/settings', auth, settingsController);
-app.use('/models', modelController);
+app.use(`${root}/auth`, authController);
+app.use(`${root}/users`, userController);
+app.use(`${root}/settings`, auth, settingsController);
+app.use(`${root}/models`, modelController);
 
 
 app.use(logErrors);
@@ -72,16 +67,3 @@ app.get('/', (req, res) => {
 app.listen(port);
 
 logger.info(`Server start listening port: ${port}`);
-
-const api = functions.https.onRequest((request, response) => {
-  if (!request.path) {
-    request.url = `/${request.url}`; // Prepend '/' to keep query params if any
-  }
-
-  return app(request, response);
-});
-
-// Configure Firebase Server
-module.exports = {
-  api,
-};
