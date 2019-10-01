@@ -33,15 +33,8 @@ function clientErrorHandler(err, req, res, next) {
   }
 }
 
-// CORS
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'https://league.arcc.ai');
-  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-  next();
-});
-
-app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 const auth = passport.authenticate('jwt', { session: false });
