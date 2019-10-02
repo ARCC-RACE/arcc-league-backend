@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f69ce318-1e12-4146-b852-b3c7bcbd70d3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.ebextensions/https-instance-securitygroup.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.ebextensions/03_files.config" beforeDir="false" afterPath="$PROJECT_DIR$/.ebextensions/03_files.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ebextensions/03_files.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ebextensions/https-instance-securitygroup.config" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
     </list>
@@ -59,7 +59,7 @@
       <option name="presentableId" value="Default" />
       <updated>1569555915489</updated>
       <workItem from="1569555916556" duration="4425000" />
-      <workItem from="1569644866950" duration="2998000" />
+      <workItem from="1569644866950" duration="3994000" />
     </task>
     <servers />
   </component>
