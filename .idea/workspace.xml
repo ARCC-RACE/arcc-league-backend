@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f69ce318-1e12-4146-b852-b3c7bcbd70d3" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.ebextensions/03_files.config" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.ebextensions/https-instance-securitygroup.config" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> parent of 19355b2... Updated documentation
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,8 +63,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1569555915489</updated>
+<<<<<<< HEAD
       <workItem from="1569555916556" duration="4425000" />
       <workItem from="1569644866950" duration="3994000" />
+=======
+      <workItem from="1569555916556" duration="3473000" />
+>>>>>>> parent of 19355b2... Updated documentation
     </task>
     <servers />
   </component>
