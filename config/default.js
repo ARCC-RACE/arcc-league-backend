@@ -24,7 +24,8 @@ module.exports = {
   },
 
   db: {
-    url: 'mongodb://user:password1@ds153766.mlab.com:53766/arcc-league',
+    url: 'mongodb://127.0.0.1:27017',
+    name: 'bundle-node',
   },
 
   logger: {

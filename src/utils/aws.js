@@ -14,7 +14,7 @@ const s3 = new aws.S3();
 
 // What file types to filter
 const fileFilter = (req, file, cb) => {
-  if (file.mimetype === 'application/gzip') {
+  if (file.mimetype === 'application/gzip' || file.mimetype === 'application/x-gzip') {
     cb(null, true);
   } else {
     cb(new Error('Invalid file type, only .tar.gz is allowed!'), false);
