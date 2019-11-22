@@ -21,9 +21,7 @@ module.exports = {
   },
 
   db: {
-    // eslint-disable-next-line max-len
-    url: 'mongodb://caelinsutch:Coolstar10!@ds153766.mlab.com:53766/arcc-league',
-    name: 'production',
+    url: 'mongodb://user:password1@ds153766.mlab.com:53766/arcc-league',
   },
   aws: {
     accessKeyId: process.env.ACCESS_KEY_ID,
