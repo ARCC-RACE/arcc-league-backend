@@ -22,8 +22,8 @@ module.exports = {
 
   db: {
     // eslint-disable-next-line max-len
-    url: 'mongodb://arcc-league:FymHoW7Mv0wyNYHKpsYFy3NaSIfJc7ZbXLMUzfuXCO0NUpONHUelxAtFjgKdyt5vsvTsJFP7G2TIKKt1l9Z8iw==@arcc-league.documents.azure.com:10255/?ssl=true',
-    name: 'bundle-node-prod',
+    url: 'mongodb://caelinsutch:Coolstar10!@ds153766.mlab.com:53766/arcc-league',
+    name: 'production',
   },
   aws: {
     accessKeyId: process.env.ACCESS_KEY_ID,
