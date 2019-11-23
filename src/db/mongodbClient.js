@@ -10,8 +10,8 @@ module.exports = function getMongoDBClient() {
   }
   logger.info('Connecting to MongoDB client...');
 
-  logger.info(`Connecting to ${url} at ${name}`);
   const { url, name } = config.get('db');
+  logger.info(`Connecting to ${url} at ${name}`);
   dbClient = mongoClient.connect(url, { useNewUrlParser: true })
     .then(client => {
       logger.info('MongoDB client has been successfully created');
