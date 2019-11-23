@@ -1432,3 +1432,39 @@
 {"message":"Server start listening port: 3001","level":"info"}
 {"message":"MongoDB client has been successfully created","level":"info"}
 {"message":"Error occurred while connecting to mongodb: MongoError: database name must be a string","level":"error"}
+{"message":"Connecting to MongoDB client...","level":"info"}
+{"message":"Connecting to mongodb://127.0.0.1:27017 at bundle-node","level":"info"}
+{"message":"Seed Data","level":"info"}
+{"message":"Server start listening port: 3001","level":"info"}
+{"message":"MongoDB client has been successfully created","level":"info"}
+{"message":"Error occurred while connecting to mongodb: MongoError: database name must be a string","level":"error"}
+{"message":"Connecting to MongoDB client...","level":"info"}
+{"message":"Connecting to mongodb://127.0.0.1:27017 at bundle-node","level":"info"}
+{"message":"Seed Data","level":"info"}
+{"message":"Server start listening port: 3001","level":"info"}
+{"message":"MongoDB client has been successfully created","level":"info"}
+{"message":"Error occurred while connecting to mongodb: MongoError: database name must be a string","level":"error"}
+{"message":"Connecting to MongoDB client...","level":"info"}
+{"message":"Connecting to mongodb://127.0.0.1:27017 at bundle-node","level":"info"}
+{"message":"Seed Data","level":"info"}
+{"message":"Server start listening port: 3001","level":"info"}
+{"message":"MongoDB client has been successfully created","level":"info"}
+{"message":"Error occurred while connecting to mongodb: MongoError: database name must be a string","level":"error"}
+{"message":"Connecting to MongoDB client...","level":"info"}
+{"message":"Connecting to mongodb://127.0.0.1:27017 at bundle-node","level":"info"}
+{"message":"Seed Data","level":"info"}
+{"message":"Server start listening port: 3001","level":"info"}
+{"message":"MongoDB client has been successfully created","level":"info"}
+{"message":"Error occurred while connecting to mongodb: MongoError: database name must be a string","level":"error"}
+{"message":"Connecting to MongoDB client...","level":"info"}
+{"message":"Connecting to mongodb://127.0.0.1:27017 at bundle-node","level":"info"}
+{"message":"Seed Data","level":"info"}
+{"message":"Server start listening port: 3001","level":"info"}
+{"message":"MongoDB client has been successfully created","level":"info"}
+{"message":"Error occurred while connecting to mongodb: MongoError: database name must be a string","level":"error"}
+{"message":"Connecting to MongoDB client...","level":"info"}
+{"message":"Connecting to mongodb://127.0.0.1:27017 at bundle-node","level":"info"}
+{"message":"Seed Data","level":"info"}
+{"message":"Server start listening port: 3001","level":"info"}
+{"message":"MongoDB client has been successfully created","level":"info"}
+{"message":"Error occurred while connecting to mongodb: MongoError: database name must be a string","level":"error"}
