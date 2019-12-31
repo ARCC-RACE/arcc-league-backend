@@ -15,7 +15,7 @@ module.exports = function getMongoDBClient() {
   dbClient = mongoClient.connect(url, { useNewUrlParser: true })
     .then(client => {
       logger.info('MongoDB client has been successfully created');
-      return client.db();
+      return client.db(name);
     })
     .catch(err => {
       logger.error(`Error occurred while connecting to mongodb: ${err}`);

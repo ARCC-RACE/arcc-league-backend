@@ -85,11 +85,13 @@ class ModelService {
       modelDescription: model.modelDescription, // (User description) Can be changed by User
       dateUploaded: model.dateUploaded, // (Date the model was uploaded)
       isEvaluated: model.isEvaluated,
+      numberOfCorrections: model.numberOfCorrections,
       time: model.time, // (Encoded Time it completed track)
+      percentCompleted: model.percentCompleted, // How much of the track was completed
       speedTested: model.speedTested, // (Speed the model was tested at (percentage))
-      videoLink: model.videoLink, // (Link to video upload)
+      overheadVideo: model.overheadVideo, // Overhead video link
+      firstPersonVideo: model.firstPersonVideo, // First person video link
       modelLink: model.modelLink, // (Link to the file)
-      modelId: model.modelId,
       invoiceNumber: model.invoiceNumber, // (Paypal Order ID)
       isPaid: model.isPaid, // (If users payed for it yet)
     } : {};
@@ -110,11 +112,13 @@ class ModelService {
       modelDescription: dto.modelDescription, // (User description) Can be changed by User
       dateUploaded: dto.dateUploaded, // (Date the model was uploaded)
       isEvaluated: dto.isEvaluated,
+      numberOfCorrections: dto.numberOfCorrections,
       time: dto.time, // (Encoded Time it completed track)
+      percentCompleted: dto.percentCompleted, // How much of the track was completed
       speedTested: dto.speedTested, // (Speed the model was tested at (percentage))
-      videoLink: dto.videoLink, // (Link to video upload)
+      overheadVideo: dto.overheadVideo, // Overhead video link
+      firstPersonVideo: dto.firstPersonVideo, // First person video link
       modelLink: dto.modelLink, // (Link to the file)
-      modelId: dto.modelId,
       invoiceNumber: dto.invoiceNumber, // (Paypal Order ID)
       isPaid: dto.isPaid, // (If users payed for it yet)
     } : {};

@@ -32,7 +32,6 @@ router.get('/usersmodels/:id', (req, res) => {
  * Creates a new model
  */
 router.post('/', (req, res) => {
-
   modelService
     .addModel(req.body)
     .then(model => res.send(model));
