@@ -1,6 +1,6 @@
 # Backend NodeJS Server
 - If developing, ensure you set your AWS access key credentials :)
-- This is deployed on heroku via continuous deployment through Github
+- This is deployed on heroku via continuous deployment on master branch through heroku
 
 URL - https://arcc-league.herokuapp.com/
 

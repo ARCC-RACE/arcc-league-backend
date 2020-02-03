@@ -20,7 +20,8 @@ module.exports = {
   },
 
   db: {
-    url: 'mongodb://user:password1@ds153766.mlab.com:53766/arcc-league',
+    url: 'mongodb://admin:password1@ds153766.mlab.com:53766/arcc-league',
+    name: ''
   },
   aws: {
     accessKeyId: process.env.ACCESS_KEY_ID,

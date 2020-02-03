@@ -8,8 +8,6 @@
     "start:prod": "export NODE_ENV=production&&node app.js",
     "lint": "eslint --report-unused-disable-directives .",
     "lint:fix": "eslint --fix .",
-    "deploy": "eb deploy",
-    "deploy-full": "git add . && git commit -am 'Deploy' && eb deploy"
   },
   "repository": {
     "type": "git",

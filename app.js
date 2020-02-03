@@ -18,6 +18,7 @@ const SeedService = require('./src/api/seedService');
 const seedService = new SeedService();
 
 const app = express();
+app.use(cors());
 const { port, root } = config.get('api');
 
 function logErrors(err, req, res, next) {
@@ -33,8 +34,6 @@ function clientErrorHandler(err, req, res, next) {
   }
 }
 
-app.use(cors());
-app.options('*', cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
