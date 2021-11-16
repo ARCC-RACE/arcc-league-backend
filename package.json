@@ -24,7 +24,7 @@
   "homepage": "league.arcc.ai",
   "dependencies": {
     "app-root-path": "^2.2.1",
-    "aws-sdk": "^2.525.0",
+    "aws-sdk": "^2.814.0",
     "body-parser": "^1.18.3",
     "config": "^3.0.1",
     "cors": "^2.8.5",
